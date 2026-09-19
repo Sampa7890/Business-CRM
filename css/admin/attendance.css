@@ -1,0 +1,227 @@
+
+.full-page{
+  display: flex;
+  align-items: stretch;
+  height: 90vh;
+}
+.attendance-page{
+  width: 70%;
+  padding: 20px;
+}
+
+.attendance-page h2, .box-holiday h2{
+  color: rgb(10, 131, 142);
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+    margin-bottom: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.massage{
+  background-color: rgb(193, 240, 232);
+  color: black;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  border-radius: 10px; 
+  animation: hidemsg 3s forwards;
+}
+@keyframes hidemsg{
+  0%{opacity: 1;}
+  20%{opacity: 0.8;}
+  40%{opacity: 0.6;}
+  60%{opacity: 0.4;}
+  80%{opacity: 0.2;}
+  100%{opacity: 0;
+       display: none;}
+}
+.error{
+  background-color: red;
+  color: rgb(0, 0, 0);
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  border-radius: 10px; 
+  animation: hideerror 3s forwards;
+}
+@keyframes hideerror{
+  0%{opacity: 1;}
+  20%{opacity: 0.8;}
+  40%{opacity: 0.6;}
+  60%{opacity: 0.4;}
+  80%{opacity: 0.2;}
+  100%{opacity: 0;
+       display: none;}
+}
+.Form-atten{
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.attend-teb {
+  width: 100%;
+ border-collapse: collapse;
+ margin-top: 10px;
+ box-shadow: 0 2px 10px black;
+ background-color: rgb(193, 240, 232);
+} 
+.attend-teb th{
+ background-color: lightgray;
+ color: rgb(10, 131, 142);
+ padding: 12px;
+ text-align: center;
+ font-size: 18px;
+ font-weight: bolder;
+ font-family:'Times New Roman', Times, serif;
+}
+.attend-teb td{
+  padding: 12px;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  font-style: italic;
+  font-weight:600;
+}
+.attend-teb tr:not(:first-child):not(:last-child) {
+  border-bottom: 2px double rgb(137, 216, 202);
+}
+.attend-teb tr:hover{
+  cursor: pointer;
+  background-color: rgb(137, 216, 202);
+}
+.attend-teb select{
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid silver;
+  background-color: white;
+  cursor: pointer;
+}
+.save{
+  color: rgb(55, 78, 70);
+  font-weight: bold;
+  font-size: 15px;
+}
+.btn-attend, .add-btn{
+  display: block;
+  margin-left: auto;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: rgb(55, 78, 70);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px black;
+  font-weight: 600;
+}
+.btn-attend:hover, .add-btn:hover{
+  background-color: rgb(199, 197, 197);
+  color: black;
+}
+.attendance-page input[type="date"]{
+  padding: 10px 14px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: lightgray;
+  color: #333;
+}
+
+.attendance-page input[type="date"]:hover{
+  border-color: rgb(137, 216, 202);
+}
+
+.attendance-page input[type="date"]:focus{
+  border-color: rgb(137, 216, 202);
+  box-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
+}
+.date,.text-holiday{
+  border: 2px solid #acabab;
+  background-color: white;
+}
+.date:focus{
+  border-color: rgb(137, 216, 202);
+  box-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
+}
+
+.date:hover,.text-holiday:hover{
+  border-color: rgb(137, 216, 202);
+  box-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
+}
+/*Holiday*/
+
+.box-holiday{
+  width: 30%;
+  padding: 20px;
+}
+
+
+.date,
+.text-holiday{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.add-btn{
+  width: 100%;
+  /* padding: 10px;
+  background-color: rgb(55, 93, 93);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;*/
+} 
+
+.row-holiday{
+  margin-top: 15px;
+  max-height: 500px;
+  overflow-y: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+
+}
+.holiday-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  background-color: rgb(193, 240, 232);
+  border: 1px solid rgb(137, 216, 202);
+  padding: 10px;
+  border-radius: 6px;
+  color: black;
+  font-weight:600;
+}
+.holiday-item:hover{
+  background-color: rgb(137, 216, 202);
+  cursor: pointer;
+}
+.row-holiday span{
+  font-size: 14px;
+  color: black;
+}
+.del-btn{
+  background: none;
+  border: none;
+  color: red;
+  font-size: 12px;
+  padding: 0;
+}
+.del-btn:hover{
+  color: darkred;
+}

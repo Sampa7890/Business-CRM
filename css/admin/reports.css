@@ -1,0 +1,120 @@
+.main {
+  background-color: rgb(245, 242, 237);
+}
+body{
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+.full-report{
+  /* margin-left: 260px;
+ 
+  box-sizing: border-box; */
+  padding: 40px 30px;
+  min-height: calc(100vh - 7px);
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.main-title{
+  display: block;
+  width: 100%;
+  font-size: 26px;
+  color: darkslategrey;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid lightgrey;
+  padding-bottom: 15px;
+  text-align: center;
+  text-shadow: 3px 3px 6px rgba(92, 91, 91, 0.684);
+}
+.report-card-section{
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 15px black;
+  border: 1px solid lightgrey;
+}
+.report-card-section h2{
+  font-size: 18px;
+  color: darkslategray;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.search-wrapper{
+  position: relative;
+  margin-bottom: 20px;
+  max-width: 350px;
+}.search-wrapper i{
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: grey;
+  z-index: 5;
+}
+.search-container{
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s;
+}
+.search-container:focus{
+  border-color: dodgerblue;
+}
+.report-teb{
+  max-height: 400px;
+  overflow-x: auto;
+  overflow-y: auto;
+  border-radius: 8px;
+  border: 1px solid lightgrey;
+  width: 100%;
+}
+.teb-final{
+  width: 100%;
+  border-collapse: collapse;
+}
+.teb-final th{
+  background-color: aliceblue;
+  color: darkslategrey;
+  padding: 14px 16px;
+  font-weight: 600;
+  border-bottom: 2px solid lightgrey;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.012);
+}
+.teb-final td{
+  padding: 14px 16px;
+  border-bottom: 1px solid lightgrey;
+  color: black;
+  white-space: nowrap;
+  text-align: center;
+}
+.teb-finaltr:last-child td{
+  border-bottom: none;
+}
+.teb-final tr:hover td{
+  background-color: ghostwhite;
+}
+.status{
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.status[data-status="Sold"]{
+  background-color: lightcoral;
+  color: darkred;
+}
+.status[data-status="Active"]{
+  background-color: lightgreen;
+  color: darkgreen;
+}

@@ -1,0 +1,112 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 25px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 18px;
+}
+
+header h2 {
+  font-size: 28px;
+  color: #222;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 14px;
+  background: #fff;
+}
+
+table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+table thead {
+  background-color: rgb(224, 223, 223);
+  color: #222;
+}
+
+table th {
+  padding: 18px;
+  text-align: left;
+}
+
+table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+table tbody tr:hover {
+  background: #f7fbff;
+}
+
+.price-text {
+  background: #eafaf1;
+  color: #28a745;
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+}
+.modal-content {
+  background: white;
+  width: 450px;
+  max-width: 90%;
+  margin: 5% auto;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: modalOpen 0.3s ease;
+}
+.warning-icon {
+  font-size: 50px;
+  text-align: center;
+}
+@keyframes modalOpen {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#error-email{
+  color: red;
+  font-size: 15px;
+  font-style: italic;
+}
+#error-contact{
+  color: red;
+  font-size: 15px;
+  font-style: italic;
+}

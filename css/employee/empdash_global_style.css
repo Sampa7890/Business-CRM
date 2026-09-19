@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+}
+
+.main {
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  padding: 25px;
+}
+
+.btn-add,
+.edit-btn,
+.delete-btn,
+.view-btn,
+.btn-save,
+.btn-clear,
+.btn-yes,
+.btn-no {
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.btn-add {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  padding: 12px 22px;
+  font-size: 15px;
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+}
+
+.edit-btn {
+  background: #e8f1ff;
+  color: #007bff;
+  padding: 10px 16px;
+}
+
+.edit-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+.delete-btn {
+  background: #ffe9ec;
+  color: #dc3545;
+  padding: 10px 16px;
+}
+
+.delete-btn:hover {
+  background: #dc3545;
+  color: white;
+}
+
+.view-btn {
+  background: #eef4ff;
+  color: #0056b3;
+  padding: 10px 16px;
+}
+
+.view-btn:hover {
+  background: #0056b3;
+  color: white;
+}
+
+.btn-save {
+  flex: 2;
+  background: linear-gradient(135deg, #28a745, #1f8a37);
+  color: white;
+  padding: 13px;
+  font-size: 15px;
+}
+
+.btn-clear {
+  flex: 1;
+  background: #e9ecef;
+  color: #444;
+  padding: 13px;
+  font-size: 15px;
+}
+
+.btn-clear:hover {
+  background: #d6d8db;
+}
+
+.btn-yes {
+  background: #dc3545;
+  color: white;
+  padding: 12px 20px;
+}
+
+.btn-no {
+  background: #f1f1f1;
+  color: #333;
+  padding: 12px 20px;
+}
+
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #555;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}

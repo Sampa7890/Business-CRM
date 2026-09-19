@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+}
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #1c2536;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.sidebar-header {
+  position: relative;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#crmarrow {
+  background-color: #1c2536;
+  color: white;
+  margin: 0;
+  padding: 2px 4px;
+}
+
+.company-dropdown {
+  position: absolute;
+  top: 90px;
+  left: 14px;
+  background-color: #3c4f72;
+  padding: 8px;
+  width: 230px;
+  border-radius: 10px;
+}
+
+#add-com {
+  color: rgb(0, 0, 0);
+  background-color: rgba(132, 244, 233, 0.474);
+  width: 210px;
+  display: flex;
+}
+
+.company-list {
+  width: 210px;
+  background-color: #3c4f72;
+  font-size: 15px;
+  color: rgb(254, 254, 255);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.company-item {
+  background-color: #2d3748;
+  width: 210px;
+  height: 35px;
+  margin-top: 5px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+
+.company-item form {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.com-select {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 40px 0 15px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.com-select:hover {
+  background-color: #4a5f84;
+  color: white;
+}
+
+.com-delete {
+  background-color: transparent;
+  border-radius: 6px;
+  border: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+  z-index: 2;
+  padding: 5px;
+  transition: all 0.3 ease;
+}
+
+.com-delete:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+
+.com-delete:disabled:active {
+  pointer-events: none;
+}
+
+.com-delete.disabled-del:hover i {
+  color: white;
+}
+.com-delete:hover i {
+  color: rgba(249, 25, 25, 0.705);
+}
+
+.company-form {
+  position: absolute;
+  top: 190px;
+  left: 14px;
+  background-color: rgb(255, 255, 255);
+  width: 230px;
+  height: 150px;
+  padding: 6px;
+  color: black;
+  border-radius: 5px;
+}
+
+#companyname {
+  font-size: 14px;
+  color: #333c4d;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+#errormsg {
+  color: red;
+  font-style: italic;
+  font-size: small;
+}
+
+.save-com {
+  position: absolute;
+  bottom: 14px;
+  background-color: rgb(143, 140, 248);
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-size: small;
+}
+
+.save-com:hover {
+  background-color: rgb(9, 9, 242);
+}
+
+.canform {
+  position: absolute;
+  bottom: 14px;
+  right: 20px;
+  background-color: rgb(210, 121, 139);
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-size: small;
+}
+
+.canform:hover {
+  background-color: rgba(255, 28, 28, 0.938);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 250px; /* Sidebar width */
+  width: calc(100% - 250px);
+  height: 60px;
+
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
+
+  padding: 0 25px;
+  background: rgb(238, 238, 251);
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 9;
+}
+
+.header-right h5 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: navy;
+  line-height: 1.2;
+}
+
+.header-right h6 {
+  margin: 2px 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: blue;
+  text-transform: capitalize;
+}
+
+.del-popup {
+  width: 300;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: none;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.del-popup button {
+  margin: 10px 5px 0;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.delbtn:hover {
+  background-color: red;
+  color: white;
+}
+
+.yesbtn:hover {
+  background-color: rgba(106, 255, 0, 0.79);
+  color: rgb(0, 0, 0);
+}
+
+.canbtn:hover {
+  background-color: rgb(129, 133, 130);
+  color: rgb(255, 255, 255);
+}
+
+.main {
+  margin-left: 260px;
+  padding: 10px;
+  margin-top: 60px;
+  background-color: #ffffff;
+}
+
+.menu {
+  list-style: none;
+  padding: 0 15px;
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #e0e0e0;
+}
+
+.menu li {
+  margin-bottom: 5px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #a0aec0;
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.menu li a i {
+  width: 25px;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.menu li.active a {
+  background-color: #333c4d;
+  color: #ffffff;
+}
+
+.menu li a:hover {
+  background-color: #2d3748;
+  color: white;
+}
+
+/*check-company.php*/
+.com-warning {
+  width: 700px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px black;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 0 0 10px rgb(167, 153, 153);
+}
